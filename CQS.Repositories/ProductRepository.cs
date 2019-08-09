@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using CQS.DB.DbModels;
-using CQS.Models;
-using CQS.MonolithicImplementation.RepositoryInterfaces;
 
 namespace CQS.Repositories
 {
-    public class ProductRepository : IProductRepository
+    public class ProductRepository : MonolithicImplementation.RepositoryInterfaces.IProductRepository,
+        SOLID.RepositoryInterfaces.IProductRepository,
+        FinalWithCasting.RepositoryInterfaces.IProductRepository,
+        FinalGeneric.RepositoryInterfaces.IProductRepository
     {
         private static List<Product> products = new List<Product>
         {

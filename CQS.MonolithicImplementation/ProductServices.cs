@@ -37,20 +37,40 @@ namespace CQS.MonolithicImplementation
 
         public void Edit(ProductEditDTO productEditDTO)
         {
-            productRepository.Edit(new DB.DbModels.Product());
+            var productToEdit = productRepository.Get(productEditDTO.Id)
+                ?? throw new ArgumentNullException(nameof(productEditDTO.Id));
+
+            productToEdit.Name = productEditDTO.Name;
+            productToEdit.Price = productEditDTO.Price;
+
+            productRepository.Edit(productToEdit);
         }
 
         public ProductDetailsDTO Get(Guid Id)
         {
             var product = productRepository.Get(Id);
 
-            return new ProductDetailsDTO();
+            return new ProductDetailsDTO
+            {
+                Id = product.Id,
+                Name = product.Name,
+                BrandName = product.BrandName,
+                Price = product.Price,
+                Count = product.Count
+            };
         }
 
         public List<ProductListDTO> List()
         {
             return productRepository.List()
-                .Select(p => new ProductListDTO())
+                .Select(p => new ProductListDTO
+                {
+                    Id = p.Id,
+                    Name = p.Name,
+                    BrandName = p.BrandName,
+                    Price = p.Price,
+                    Count = p.Count
+                })
                 .ToList();
         }
     }

@@ -3,17 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQS.MonolithicImplementation", "CQS.MonolithicImplementation\CQS.MonolithicImplementation.csproj", "{122841AC-6144-4B57-86E9-DFE4505FA2B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CQS.MonolithicImplementation", "CQS.MonolithicImplementation\CQS.MonolithicImplementation.csproj", "{122841AC-6144-4B57-86E9-DFE4505FA2B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQS.Models", "CQS.Models\CQS.Models.csproj", "{536942F1-B1C1-4A1E-9A61-46A933BA76D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CQS.Models", "CQS.Models\CQS.Models.csproj", "{536942F1-B1C1-4A1E-9A61-46A933BA76D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQS.Repositories", "CQS.Repositories\CQS.Repositories.csproj", "{5FEE9963-3C24-416C-B0F7-A450B96E6289}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CQS.Repositories", "CQS.Repositories\CQS.Repositories.csproj", "{5FEE9963-3C24-416C-B0F7-A450B96E6289}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQS.DB.Models", "CQS.DB.Models\CQS.DB.Models.csproj", "{A7FE6FBB-ADED-4895-BBEE-70FF499791F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CQS.DB.Models", "CQS.DB.Models\CQS.DB.Models.csproj", "{A7FE6FBB-ADED-4895-BBEE-70FF499791F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQS.UI", "CQS.UI\CQS.UI.csproj", "{BCDE13D2-CA42-4EA2-8169-B0EF7B19DDDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CQS.UI", "CQS.UI\CQS.UI.csproj", "{BCDE13D2-CA42-4EA2-8169-B0EF7B19DDDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQS.SOLID", "CQS.SOLID\CQS.SOLID.csproj", "{28CFFCFC-6915-4C76-888C-DCB77F5B2426}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CQS.SOLID", "CQS.SOLID\CQS.SOLID.csproj", "{28CFFCFC-6915-4C76-888C-DCB77F5B2426}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CQS.FinalWithCasting", "CQS.FinalWithCasting\CQS.FinalWithCasting.csproj", "{11D4CCC5-8D76-409E-AD12-6F8A4B2457DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQS.FinalGeneric", "CQS.FinalGeneric\CQS.FinalGeneric.csproj", "{775DFFF8-2A87-4F78-B7E0-011BB6C54491}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{28CFFCFC-6915-4C76-888C-DCB77F5B2426}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28CFFCFC-6915-4C76-888C-DCB77F5B2426}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28CFFCFC-6915-4C76-888C-DCB77F5B2426}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11D4CCC5-8D76-409E-AD12-6F8A4B2457DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11D4CCC5-8D76-409E-AD12-6F8A4B2457DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11D4CCC5-8D76-409E-AD12-6F8A4B2457DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11D4CCC5-8D76-409E-AD12-6F8A4B2457DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{775DFFF8-2A87-4F78-B7E0-011BB6C54491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{775DFFF8-2A87-4F78-B7E0-011BB6C54491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{775DFFF8-2A87-4F78-B7E0-011BB6C54491}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{775DFFF8-2A87-4F78-B7E0-011BB6C54491}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

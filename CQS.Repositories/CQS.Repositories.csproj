@@ -5,7 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CQS.FinalGeneric\CQS.FinalGeneric.csproj" />
+    <ProjectReference Include="..\CQS.FinalWithCasting\CQS.FinalWithCasting.csproj" />
     <ProjectReference Include="..\CQS.MonolithicImplementation\CQS.MonolithicImplementation.csproj" />
+    <ProjectReference Include="..\CQS.SOLID\CQS.SOLID.csproj" />
   </ItemGroup>
 
 </Project>

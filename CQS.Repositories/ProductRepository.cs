@@ -42,7 +42,7 @@ namespace CQS.Repositories
 
         public Product Edit(Product product)
         {
-            dbTableMock.AddOrUpdate(product.Id, product, (Guid id, Product oldProduct) => product);
+            dbTableMock.AddOrUpdate(product.Id, product, (id, oldProduct) => product);
             return product;
         }
 
@@ -58,7 +58,7 @@ namespace CQS.Repositories
 
         public IEnumerable<Product> List()
         {
-            var products = new List<Product>();
+            var allProducts = new List<Product>();
             foreach(var product in dbTableMock)
             {
                 products.Add(product.Value);

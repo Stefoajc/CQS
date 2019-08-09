@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CQS.Models\CQS.Models.csproj" />
+    <ProjectReference Include="..\CQS.MonolithicImplementation\CQS.MonolithicImplementation.csproj" />
+    <ProjectReference Include="..\CQS.Repositories\CQS.Repositories.csproj" />
+  </ItemGroup>
+
+</Project>

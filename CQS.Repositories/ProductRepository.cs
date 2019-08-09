@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using CQS.DB.DbModels;
+using CQS.DB.Models;
 
 namespace CQS.Repositories
 {
@@ -9,7 +9,7 @@ namespace CQS.Repositories
         FinalWithCasting.RepositoryInterfaces.IProductRepository,
         FinalGeneric.RepositoryInterfaces.IProductRepository
     {
-        private static List<Product> products = new List<Product>
+        private static readonly List<Product> products = new List<Product>
         {
             new Product{ Id = Guid.NewGuid(), BrandName = "Nike", Name="Nike Air Max", Count = 10, Price = 100 },
             new Product{ Id = Guid.NewGuid(), BrandName = "Adidas", Name="Cloudfoam Racer TR", Count = 10, Price = 100 },

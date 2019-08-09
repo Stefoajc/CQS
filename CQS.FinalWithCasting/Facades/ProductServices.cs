@@ -59,7 +59,7 @@ namespace CQS.FinalWithCasting.Facades
                 Name = productEditDTO.Name,
                 Price = productEditDTO.Price
             };
-            productEdit.Handle(productEditDTO);
+            productEdit.Handle(command);
         }
 
 

@@ -1,7 +1,6 @@
-﻿using CQS.DB.DbModels;
-using CQS.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using CQS.DB.Models;
 
 namespace CQS.MonolithicImplementation.RepositoryInterfaces
 {

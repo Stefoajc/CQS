@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CQS.FinalGeneric.Commands.Base
+﻿namespace CQS.FinalGeneric.Commands.Base
 {
-    public interface ICommandHandler<TCommand>
+    public interface ICommandHandler<in TCommand>
     {
         void Handle(TCommand command);
     }

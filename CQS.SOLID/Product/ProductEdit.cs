@@ -2,8 +2,6 @@
 using CQS.SOLID.Product.Interfaces;
 using CQS.SOLID.RepositoryInterfaces;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CQS.SOLID.Product
 {

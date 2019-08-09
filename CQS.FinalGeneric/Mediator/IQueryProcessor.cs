@@ -1,7 +1,4 @@
 ﻿using CQS.FinalGeneric.Queries.Base;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CQS.FinalGeneric.Mediator
 {

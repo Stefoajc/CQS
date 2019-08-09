@@ -16,7 +16,7 @@ namespace CQS.FinalGeneric.Commands.Product.Create
         public void Handle(CreateProductCommand command)
         {
             var productId = Guid.NewGuid();
-            var productToCreate = new DB.DbModels.Product
+            var productToCreate = new DB.Models.Product
             {
                 Id = productId,
                 BrandName = command.BrandName,

@@ -2,8 +2,6 @@
 using CQS.FinalWithCasting.Commands.Base;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CQS.FinalWithCasting.Common.CommandAspects
 {

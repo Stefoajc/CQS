@@ -1,19 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SimpleInjector" Version="4.6.2" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\CQS.FinalGeneric\4.CQS.FinalGeneric.csproj" />
     <ProjectReference Include="..\CQS.FinalWithCasting\3.CQS.FinalWithCasting.csproj" />
-    <ProjectReference Include="..\CQS.Models\0.CQS.Models.csproj" />
     <ProjectReference Include="..\CQS.MonolithicImplementation\1.CQS.MonolithicImplementation.csproj" />
-    <ProjectReference Include="..\CQS.Repositories\0.CQS.Repositories.csproj" />
     <ProjectReference Include="..\CQS.SOLID\2.CQS.SOLID.csproj" />
   </ItemGroup>
 

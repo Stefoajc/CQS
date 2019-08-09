@@ -9,8 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CQS.DB.Models\CQS.DB.Models.csproj" />
-    <ProjectReference Include="..\CQS.Models\CQS.Models.csproj" />
+    <ProjectReference Include="..\CQS.DB.Models\0.CQS.DB.Models.csproj" />
+    <ProjectReference Include="..\CQS.Models\0.CQS.Models.csproj" />
   </ItemGroup>
 
 </Project>

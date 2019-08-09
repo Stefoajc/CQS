@@ -6,11 +6,11 @@ namespace CQS.SOLID.RepositoryInterfaces
 {
     public interface IProductRepository
     {
-        DB.DbModels.Product Get(Guid Id);
-        IEnumerable<DB.DbModels.Product> List();
-        DB.DbModels.Product Create(DB.DbModels.Product product);
-        DB.DbModels.Product Edit(DB.DbModels.Product product);
-        void Delete(Guid Id);
+        DB.Models.Product Get(Guid id);
+        IEnumerable<DB.Models.Product> List();
+        DB.Models.Product Create(DB.Models.Product product);
+        DB.Models.Product Edit(DB.Models.Product product);
+        void Delete(Guid id);
         bool Exists(Guid id);
     }
 }

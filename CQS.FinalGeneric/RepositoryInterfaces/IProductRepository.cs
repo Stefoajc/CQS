@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using CQS.DB.Models;
 
 
 namespace CQS.FinalGeneric.RepositoryInterfaces
 {
     public interface IProductRepository
     {
-        DB.DbModels.Product Get(Guid Id);
-        IEnumerable<DB.DbModels.Product> List();
-        DB.DbModels.Product Create(DB.DbModels.Product product);
-        DB.DbModels.Product Edit(DB.DbModels.Product product);
-        void Delete(Guid Id);
+        Product Get(Guid id);
+        IEnumerable<Product> List();
+        Product Create(Product product);
+        Product Edit(Product product);
+        void Delete(Guid id);
         bool Exists(Guid id);
     }
 }

@@ -15,9 +15,9 @@ namespace CQS.FinalWithCasting.Commands.Product.Create
 
         public void Handle(object command)
         {
-            CreateProductCommand commandToExecute = command as CreateProductCommand;
+            CreateProductCommand commandToExecute = (CreateProductCommand)command;
             var productId = Guid.NewGuid();
-            var productToCreate = new DB.DbModels.Product
+            var productToCreate = new DB.Models.Product
             {
                 Id = productId,
                 BrandName = commandToExecute.BrandName,

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using CQS.DB.Models;
 using CQS.Models;
 using CQS.MonolithicImplementation.RepositoryInterfaces;
 
@@ -8,7 +9,7 @@ namespace CQS.MonolithicImplementation
 {
     public class ProductServices : IProductServices
     {
-        private IProductRepository productRepository;
+        private readonly IProductRepository productRepository;
 
         public ProductServices(IProductRepository productRepository)
         {
@@ -18,7 +19,7 @@ namespace CQS.MonolithicImplementation
         public void Create(ProductCreateDTO productCreateDTO)
         {
             var productId = Guid.NewGuid();
-            var productToCreate = new DB.DbModels.Product
+            var productToCreate = new Product
             {
                 Id = productId,
                 BrandName = productCreateDTO.BrandName,
@@ -46,9 +47,9 @@ namespace CQS.MonolithicImplementation
             productRepository.Edit(productToEdit);
         }
 
-        public ProductDetailsDTO Get(Guid Id)
+        public ProductDetailsDTO Get(Guid id)
         {
-            var product = productRepository.Get(Id);
+            var product = productRepository.Get(id);
 
             return new ProductDetailsDTO
             {

@@ -3,8 +3,6 @@ using CQS.Models;
 using CQS.SOLID.Product.Interfaces;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CQS.SOLID.Common
 {

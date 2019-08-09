@@ -1,6 +1,5 @@
 ﻿using CQS.FinalWithCasting.Queries.Base;
 using CQS.FinalWithCasting.RepositoryInterfaces;
-using System;
 using System.Linq;
 
 namespace CQS.FinalWithCasting.Queries.Product.List
@@ -16,7 +15,6 @@ namespace CQS.FinalWithCasting.Queries.Product.List
 
         public object Handle(object query)
         {
-            ListProductQuery listProductQuery = query as ListProductQuery;
             return productRepository.List()
                 .Select(p => new ListProductResult
                 {

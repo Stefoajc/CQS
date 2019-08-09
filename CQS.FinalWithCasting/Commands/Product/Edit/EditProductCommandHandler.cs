@@ -15,7 +15,7 @@ namespace CQS.FinalWithCasting.Commands.Product.Edit
 
         public void Handle(object command)
         {
-            EditProductCommand commandToExecute = command as EditProductCommand;
+            EditProductCommand commandToExecute = (EditProductCommand)command;
 
             var productToEdit = productRepository.Get(commandToExecute.Id)
                 ?? throw new ArgumentNullException(nameof(commandToExecute.Id));

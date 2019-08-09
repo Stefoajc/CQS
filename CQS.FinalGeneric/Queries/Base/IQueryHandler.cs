@@ -1,6 +1,6 @@
 ﻿namespace CQS.FinalGeneric.Queries.Base
 {
-    public interface IQueryHandler<TQuery,TResult> where TQuery : IQuery<TResult>
+    public interface IQueryHandler<in TQuery, out TResult> where TQuery : IQuery<TResult>
     {
         TResult Handle(TQuery query);
     }

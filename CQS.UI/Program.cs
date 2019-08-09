@@ -72,7 +72,7 @@ namespace CQS.UI
 
             foreach(var product in products)
             {
-                Console.WriteLine($"{product.Name} - {product.BrandName} / {product.Price.ToString("c")}");
+                Console.WriteLine($"{product.Name} - {product.BrandName} / {product.Price:c}");
             }
         }
     }

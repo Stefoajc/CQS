@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CQS.DB.DbModels
+namespace CQS.DB.Models
 {
     public class Product
     {

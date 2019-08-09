@@ -17,7 +17,7 @@ namespace CQS.SOLID.Product
         public void Create(ProductCreateDTO productCreateDTO)
         {
             var productId = Guid.NewGuid();
-            var productToCreate = new DB.DbModels.Product
+            var productToCreate = new DB.Models.Product
             {
                 Id = productId,
                 BrandName = productCreateDTO.BrandName,

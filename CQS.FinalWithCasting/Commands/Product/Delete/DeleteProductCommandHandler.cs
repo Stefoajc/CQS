@@ -1,8 +1,5 @@
 ﻿using CQS.FinalWithCasting.Commands.Base;
 using CQS.FinalWithCasting.RepositoryInterfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CQS.FinalWithCasting.Commands.Product.Delete
 {
@@ -17,7 +14,7 @@ namespace CQS.FinalWithCasting.Commands.Product.Delete
 
         public void Handle(object command)
         {
-            DeleteProductCommand commandToExecute = command as DeleteProductCommand;
+            DeleteProductCommand commandToExecute = (DeleteProductCommand)command;
             productRepository.Delete(commandToExecute.Id);
         }
     }

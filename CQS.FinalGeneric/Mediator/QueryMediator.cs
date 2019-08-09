@@ -1,5 +1,4 @@
-﻿using System;
-using CQS.FinalGeneric.Queries.Base;
+﻿using CQS.FinalGeneric.Queries.Base;
 using SimpleInjector;
 
 namespace CQS.FinalGeneric.Mediator

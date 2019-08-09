@@ -14,7 +14,7 @@ namespace CQS.FinalWithCasting.Queries.Product.Get
 
         public object Handle(object query)
         {
-            GetProductQuery getProductQuery = query as GetProductQuery;
+            GetProductQuery getProductQuery = (GetProductQuery)query;
             var product = productRepository.Get(getProductQuery.Id);
 
             return new GetProductResult

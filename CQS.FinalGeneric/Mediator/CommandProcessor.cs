@@ -1,8 +1,5 @@
 ﻿using CQS.FinalGeneric.Commands.Base;
 using SimpleInjector;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CQS.FinalGeneric.Mediator
 {

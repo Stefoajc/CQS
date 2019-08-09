@@ -6,6 +6,7 @@ namespace CQS.MonolithicImplementation
 {
     public interface IProductServices
     {
+
         List<ProductListDTO> List();
         ProductDetailsDTO Get(Guid id);
 

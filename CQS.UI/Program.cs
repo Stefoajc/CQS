@@ -10,6 +10,8 @@ using CQS.Repositories;
 using SimpleInjector;
 using System;
 using System.Collections.Generic;
+using CQS.FinalGeneric.Common.CommandAspects;
+using CQS.FinalGeneric.Queries.Product.Get;
 
 namespace CQS.UI
 {
@@ -48,12 +50,15 @@ namespace CQS.UI
             //------------------------  CQS Generic (OCP applied) SERVICE  ------------------------
             var commandQueryGenericRepo = new ProductRepository();
             var cqsGenericProductService = new FinalGeneric.Facades.ProductServices(
-                new FinalGeneric.Common.CommandAspects.AuditedCommandHandler<CreateProductCommand>(new CreateProductCommandHandler(commandQueryRepo)),
-                new FinalGeneric.Common.CommandAspects.AuditedCommandHandler<EditProductCommand>(new EditProductCommandHandler(commandQueryRepo)),
-                new FinalGeneric.Common.CommandAspects.AuditedCommandHandler<DeleteProductCommand>(new DeleteProductCommandHandler(commandQueryRepo)),
-                new FinalGeneric.Queries.Product.Get.GetProductQueryHandler(commandQueryRepo),
-                new FinalGeneric.Queries.Product.List.ListProductQueryHandler(commandQueryRepo));
+                new AuditedCommandHandler<CreateProductCommand>(new CreateProductCommandHandler(commandQueryGenericRepo)),
+                new AuditedCommandHandler<EditProductCommand>(new EditProductCommandHandler(commandQueryGenericRepo)),
+                new AuditedCommandHandler<DeleteProductCommand>(new DeleteProductCommandHandler(commandQueryGenericRepo)),
+                new GetProductQueryHandler(commandQueryGenericRepo),
+                new ListProductQueryHandler(commandQueryGenericRepo));
 
+
+
+            //------------------------  CQS Generic SERVICE With IoC  ------------------------
             Container container = new Container();
             container.Register<IProductRepository, ProductRepository>(Lifestyle.Singleton);
             container.Register(
@@ -62,6 +67,9 @@ namespace CQS.UI
             container.Register(
                 typeof(ICommandHandler<>),
                 typeof(ICommandHandler<>).Assembly);
+            container.RegisterDecorator(
+                typeof(ICommandHandler<>),
+                typeof(AuditedCommandHandler<>));
 
             var queryMediator = new QueryMediator(container);
             var commandMediator = new CommandMediator(container);

@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CQS.FinalWithCasting.Commands.Product.Create.CreateProductCommandHandler" Collapsed="true">
+    <Position X="1" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\Product\Create\CreateProductCommandHandler.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="productRepository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CQS.FinalWithCasting.Commands.Product.Delete.DeleteProductCommandHandler" Collapsed="true">
+    <Position X="2.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\Product\Delete\DeleteProductCommandHandler.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="productRepository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CQS.FinalWithCasting.Commands.Product.Edit.EditProductCommandHandler" Collapsed="true">
+    <Position X="4.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\Product\Edit\EditProductCommandHandler.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="productRepository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CQS.FinalWithCasting.Queries.Product.Get.GetProductQueryHandler" Collapsed="true">
+    <Position X="6.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Queries\Product\Get\GetProductQueryHandler.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="productRepository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CQS.FinalWithCasting.Queries.Product.List.ListProductQueryHandler" Collapsed="true">
+    <Position X="8.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Queries\Product\List\ListProductQueryHandler.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="productRepository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CQS.FinalWithCasting.Facades.ProductServices" Collapsed="true">
+    <Position X="1" Y="1.25" Width="8.75" />
+    <AssociationLine Name="productCreate" Type="CQS.FinalWithCasting.Commands.Base.ICommandHandler" FixedFromPoint="true">
+      <Path>
+        <Point X="1.312" Y="1.812" />
+        <Point X="1.312" Y="3" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.008" Y="0.235" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="productDelete" Type="CQS.FinalWithCasting.Commands.Base.ICommandHandler" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.688" Y="1.812" />
+        <Point X="2.688" Y="2.406" />
+        <Point X="2.688" Y="2.406" />
+        <Point X="2.688" Y="3" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.018" Y="0.225" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="productEdit" Type="CQS.FinalWithCasting.Commands.Base.ICommandHandler" FixedFromPoint="true">
+      <Path>
+        <Point X="3.938" Y="1.812" />
+        <Point X="3.938" Y="3" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.039" Y="0.183" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="productGet" Type="CQS.FinalWithCasting.Queries.Base.IQueryHandler" FixedFromPoint="true">
+      <Path>
+        <Point X="7.5" Y="1.812" />
+        <Point X="7.5" Y="3" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="productList" Type="CQS.FinalWithCasting.Queries.Base.IQueryHandler" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.812" Y="1.812" />
+        <Point X="8.812" Y="2.656" />
+        <Point X="8.812" Y="2.656" />
+        <Point X="8.812" Y="3" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAACCAAQAAAAABAAAAAAAAAAAEAAGADAAAAAAAAAAI=</HashCode>
+      <FileName>Facades\ProductServices.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="productCreate" />
+      <Field Name="productDelete" />
+      <Field Name="productEdit" />
+      <Field Name="productGet" />
+      <Field Name="productList" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CQS.FinalWithCasting.Common.CommandAspects.AuditedCommandHandler" Collapsed="true">
+    <Position X="4.25" Y="2.25" Width="1.75" />
+    <AssociationLine Name="commandHandler" Type="CQS.FinalWithCasting.Commands.Base.ICommandHandler" FixedFromPoint="true">
+      <Path>
+        <Point X="5.812" Y="2.812" />
+        <Point X="5.812" Y="3" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.398" Y="0.245" Height="0.182" Width="1.274" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\CommandAspects\AuditedCommandHandler.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="commandHandler" />
+    </ShowAsAssociation>
+    <Lollipop Orientation="Bottom" Position="0.1" />
+  </Class>
+  <Interface Name="CQS.FinalWithCasting.Commands.Base.ICommandHandler" Collapsed="true">
+    <Position X="1" Y="3" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\Base\ICommandHandler.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CQS.FinalWithCasting.Queries.Base.IQueryHandler" Collapsed="true">
+    <Position X="6.5" Y="3" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Queries\Base\IQueryHandler.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CQS.FinalWithCasting.RepositoryInterfaces.IProductRepository" Collapsed="true">
+    <Position X="1" Y="4.75" Width="8.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAEAAEACAAAAAAEAAAI=</HashCode>
+      <FileName>RepositoryInterfaces\IProductRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CQS.FinalWithCasting.Facades.IProductServices" Collapsed="true">
+    <Position X="1" Y="0.5" Width="8.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAEAAEACAAAAAAAAAAI=</HashCode>
+      <FileName>Facades\IProductServices.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

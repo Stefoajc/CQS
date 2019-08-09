@@ -5,15 +5,15 @@ using System;
 
 namespace CQS.FinalGeneric.Common.CommandAspects
 {
-    public class AuditedCommandHandler<TResult> : ICommandHandler<TResult>
+    public class AuditedCommandHandler<TCommand> : ICommandHandler<TCommand>
     {
-        private readonly ICommandHandler<TResult> commandHandler;
+        private readonly ICommandHandler<TCommand> commandHandler;
 
-        public AuditedCommandHandler(ICommandHandler<TResult> commandHandler)
+        public AuditedCommandHandler(ICommandHandler<TCommand> commandHandler)
         {
             this.commandHandler = commandHandler;
         }
-        public void Handle(TResult command)
+        public void Handle(TCommand command)
         {
             commandHandler.Handle(command);
 

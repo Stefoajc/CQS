@@ -1,8 +1,10 @@
 Series of code changes from Monolithic Service Class to CQS compliant design  
 1.Monolithic Service Class (Entity Centric Use Case).  
+
 2.SRP applied to the Monolithic Service Class (Split the broad interface to one method interfaces).  
   IProductService here is facade interface.  
   Product service forward the work to the fine grain worker classes. (Implementors of one method interfaces)  
+  
 3.CQS design applied.  
   - Single method interfaces changing the state are merged in ICommandHandler interface (They shouldn't return result)  
   - Single method interfaces getting information from the application are merged in IQueryHandler (They must not change the state)  

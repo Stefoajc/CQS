@@ -1,4 +1,5 @@
 Series of code changes from Monolithic Service Class to CQS compliant design  
+
 1.Monolithic Service Class (Entity Centric Use Case).  
 
 2.SRP applied to the Monolithic Service Class (Split the broad interface to one method interfaces).  

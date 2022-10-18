@@ -4,7 +4,7 @@ namespace CQS.FinalWithCasting.Commands.Product.Create
 {
     public class CreateProductCommand
     {
-        private Guid Id { get; set; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public string BrandName { get; set; }
         public decimal Price { get; set; }

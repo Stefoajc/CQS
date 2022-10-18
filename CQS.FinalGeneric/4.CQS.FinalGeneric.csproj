@@ -5,12 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Common\QuerieAspects\" />
+    <Compile Remove="Common\QuerieAspects\**" />
+    <EmbeddedResource Remove="Common\QuerieAspects\**" />
+    <None Remove="Common\QuerieAspects\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
-    <PackageReference Include="SimpleInjector" Version="4.6.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="SimpleInjector" Version="5.4.1" />
   </ItemGroup>
 
   <ItemGroup>

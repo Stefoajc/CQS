@@ -1,6 +1,5 @@
 ﻿using CQS.FinalGeneric.Commands.Base;
 using CQS.FinalGeneric.RepositoryInterfaces;
-using System;
 
 namespace CQS.FinalGeneric.Commands.Product.Create
 {
@@ -15,10 +14,9 @@ namespace CQS.FinalGeneric.Commands.Product.Create
 
         public void Handle(CreateProductCommand command)
         {
-            var productId = Guid.NewGuid();
             var productToCreate = new DB.Models.Product
             {
-                Id = productId,
+                Id = command.Id,
                 BrandName = command.BrandName,
                 Name = command.Name,
                 Count = command.Count,

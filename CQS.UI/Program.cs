@@ -19,8 +19,6 @@ namespace CQS.UI
     {
         static void Main()
         {
-            Console.WriteLine("Hello World!");
-
             //------------------------  MONOLITHIC SERVICE  ------------------------
             var monilithicProductService = new MonolithicImplementation.Common.AuditedProductService(
                 new MonolithicImplementation.ProductServices(
@@ -50,9 +48,12 @@ namespace CQS.UI
             //------------------------  CQS Generic (OCP applied) SERVICE  ------------------------
             var commandQueryGenericRepo = new ProductRepository();
             var cqsGenericProductService = new FinalGeneric.Facades.ProductServices(
+                // Apply audit CCC
                 new AuditedCommandHandler<CreateProductCommand>(new CreateProductCommandHandler(commandQueryGenericRepo)),
                 new AuditedCommandHandler<EditProductCommand>(new EditProductCommandHandler(commandQueryGenericRepo)),
                 new AuditedCommandHandler<DeleteProductCommand>(new DeleteProductCommandHandler(commandQueryGenericRepo)),
+
+                // Plain query handlers
                 new GetProductQueryHandler(commandQueryGenericRepo),
                 new ListProductQueryHandler(commandQueryGenericRepo));
 

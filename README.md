@@ -16,3 +16,8 @@ CQS.DB.Models, CQS.Models, CQS.Repositories, CQS.UI are helper projects giving s
   - IQueryHandler is changed to IQueryHandler<TQuery, TResult>  
     (TQuery is the type of the  input parameter, TResult is the type of the result of the query)  
   - This way we add compile time checks and bypass casting from and to  
+
+5. CQS.MediatR - CQS using MediatR library
+  - MediatR is one of the most popular libraries imlementing the Mediator pattern along with CQS
+  - IRequest<TResult> is the interface which represents both commands and queries
+  - IRequestHandler<IRequest<TResult>, TResult> is the interface where the implementation of the functionality takes place

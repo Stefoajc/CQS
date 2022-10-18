@@ -19,7 +19,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3.CQS.FinalWithCasting", "C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4.CQS.FinalGeneric", "CQS.FinalGeneric\4.CQS.FinalGeneric.csproj", "{775DFFF8-2A87-4F78-B7E0-011BB6C54491}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.CQS.MediatR", "5.CQS.MediatR\5.CQS.MediatR.csproj", "{5FD77443-6C2B-47E4-9575-685D86013FC9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2271F2FF-B292-4B8A-95D4-E91ECF5C71D0}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5.CQS.MediatR", "CQS.MediatR\5.CQS.MediatR.csproj", "{18C656E0-3927-4ED0-8AB3-19F79E748C7A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,10 +64,10 @@ Global
 		{775DFFF8-2A87-4F78-B7E0-011BB6C54491}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{775DFFF8-2A87-4F78-B7E0-011BB6C54491}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{775DFFF8-2A87-4F78-B7E0-011BB6C54491}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5FD77443-6C2B-47E4-9575-685D86013FC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5FD77443-6C2B-47E4-9575-685D86013FC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5FD77443-6C2B-47E4-9575-685D86013FC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5FD77443-6C2B-47E4-9575-685D86013FC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18C656E0-3927-4ED0-8AB3-19F79E748C7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18C656E0-3927-4ED0-8AB3-19F79E748C7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18C656E0-3927-4ED0-8AB3-19F79E748C7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18C656E0-3927-4ED0-8AB3-19F79E748C7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
